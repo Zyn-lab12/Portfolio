@@ -22,7 +22,7 @@ body {
 header {
     z-index: 889;
     position: fixed;
-    background-color: #87CEEB; /* Light sky blue */
+    background-color: #87CEEB; 
     top: 0;
     left: 0;
     width: 100%;
@@ -34,18 +34,18 @@ header {
 }
 
 header .brand {
-    color: #F5F6F5; /* Soft off-white */
+    color: #F5F6F5; 
     font-size: 1.8em;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    animation: float 3s ease-in-out infinite; /* Tween animation: gentle float */
+    animation: float 3s ease-in-out infinite; 
     transition: 0.3s ease;
 }
 
 header .brand:hover {
-    transform: scale(1.05) rotate(5deg); /* Scale and slight rotation */
-    color: #B0C4DE; /* Light steel blue */
+    transform: scale(1.05) rotate(5deg); 
+    color: #B0C4DE; 
 }
 
 header .navigation {
@@ -53,7 +53,7 @@ header .navigation {
 }
 
 header .navigation a {
-    color: #F5F6F5; /* Soft off-white */
+    color: #F5F6F5; 
     font-size: 1em;
     text-decoration: none;
     font-weight: 500;
@@ -69,18 +69,17 @@ header .navigation a::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #B0C4DE; /* Light steel blue underline */
+    background-color: #B0C4DE; 
     transition: width 0.3s ease;
 }
 
 header .navigation a:hover::after {
-    width: 100%; /* Underline grows on hover */
+    width: 100%; 
 }
 
 header .navigation a:hover {
-    color: #B0C4DE; /* Light steel blue */
-    transform: translateY(-2px) rotate(3deg); /* Lift and slight rotation */
-}
+    color: #B0C4DE;
+    transform: translateY(-2px) rotate(3deg);
 
 section {
     padding: 100px 200px;
@@ -97,19 +96,19 @@ section {
 }
 
 .home h1 {
-    color: #F5F6F5; /* Soft off-white */
+    color: #F5F6F5; 
     font-size: 2.5rem;
     font-weight: 700;
 }
 
 .home h1 span {
     font-size: 3rem;
-    color: #A2BFFE; /* Pale blue */
+    color: #A2BFFE; 
 }
 
 .home .typing-text {
     font-size: 1.5rem;
-    color: #D3D8E2; /* Light grayish-blue */
+    color: #D3D8E2; 
     font-weight: 500;
     margin-top: 20px;
 }
@@ -128,21 +127,20 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    animation: pulse 2.5s ease-in-out infinite; /* Tween animation: subtle pulse */
+    animation: pulse 2.5s ease-in-out infinite; 
     transition: all 0.4s ease;
 }
 
 .home .social-icons img:hover {
-    transform: scale(1.2) rotate(15deg); /* Scale and more noticeable rotation */
+    transform: scale(1.2) rotate(15deg); 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     filter: brightness(1.1);
 }
 
-/* Moved 'Hire Me' button further down */
+
 .home .btn {
-    color: #F5F6F5; /* Soft off-white */
-    background-color: #A2BFFE; /* Pale blue */
-    font-size: 1em;
+    color: #F5F6F5;
+    background-color: #A2BFFE; 
     font-weight: 600;
     display: inline-block;
     padding: 10px 20px;
@@ -153,13 +151,13 @@ section {
     margin-top: 70px;
     position: relative;
     overflow: hidden;
-    animation: bounce 4s ease-in-out infinite; /* Tween animation: gentle bounce */
+    animation: bounce 4s ease-in-out infinite; 
     transition: all 0.5s ease;
 }
 
 .home .btn:hover {
-    background-color: #B0C4DE; /* Light steel blue */
-    transform: scale(1.05) translateY(-3px) rotate(5deg); /* Scale, lift, and rotation */
+    background-color: #B0C4DE; 
+    transform: scale(1.05) translateY(-3px) rotate(5deg); 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -175,8 +173,7 @@ section {
 }
 
 .home .btn:hover::before {
-    left: 100%; /* Shine effect moves across */
-}
+    left: 100%; 
 
 @media (max-width: 1040px) {
     header {
@@ -190,7 +187,7 @@ section {
     .navigation.active {
         z-index: 889;
         position: fixed;
-        background-color: #F5F6F5; /* Off-white */
+        background-color: #F5F6F5; 
         top: 0;
         right: 0;
         width: 380px;
@@ -204,7 +201,7 @@ section {
     }
 
     header .navigation a {
-        color: #4682B4; /* Steel blue */
+        color: #4682B4; 
         font-size: 1.2em;
         margin: 10px;
         padding: 10px 40px;
@@ -220,18 +217,18 @@ section {
         height: 2px;
         bottom: 5px;
         left: 40px;
-        background-color: #A2BFFE; /* Pale blue underline */
+        background-color: #A2BFFE; 
         transition: width 0.3s ease;
     }
 
     header .navigation a:hover::after {
-        width: calc(100% - 80px); /* Underline grows */
+        width: calc(100% - 80px); 
     }
 
     header .navigation a:hover {
-        background-color: #A2BFFE; /* Pale blue */
-        color: #F5F6F5; /* Off-white */
-        transform: translateY(-2px) rotate(3deg); /* Lift and slight rotation */
+        background-color: #A2BFFE; 
+        color: #F5F6F5; 
+        transform: translateY(-2px) rotate(3deg); 
     }
 
     .home {
@@ -252,13 +249,13 @@ section {
     }
 }
 
-/* Keyframe Animations */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-5px); /* Gentle vertical float */
+        transform: translateY(-5px); 
     }
 }
 
@@ -268,7 +265,7 @@ section {
         opacity: 0.9;
     }
     50% {
-        transform: scale(1.05); /* Subtle pulse effect */
+        transform: scale(1.05); 
         opacity: 1;
     }
 }
@@ -278,6 +275,6 @@ section {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-8px); /* Soft bounce */
+        transform: translateY(-8px); 
     }
 }
