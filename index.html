@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwin Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('moon.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(135, 206, 235, 0.4); /* Light sky blue with transparency */
+            backdrop-filter: blur(8px); /* Blurred background effect */
+            z-index: 1000;
+            transition: 0.3s ease;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #F5F6F5; /* Soft off-white */
+            text-decoration: none;
+            animation: float 3s ease-in-out infinite; /* Tween animation */
+            transition: 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg); /* Scale and slight rotation */
+            color: #B0C4DE; /* Light steel blue */
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #F5F6F5; /* Soft off-white */
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background: #A2BFFE; /* Pale blue */
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transition: 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover {
+            color: #B0C4DE; /* Light steel blue */
+            transform: translateY(-2px) rotate(3deg); /* Lift and rotation */
+        }
+
+        nav a:hover::after {
+            width: 100%; /* Underline grows */
+        }
+
+        /* Hero Section */
+        .home {
+            text-align: center;
+            padding: 150px 0;
+            color: #F5F6F5; /* Soft off-white */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .home h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .home h1 span {
+            color: #A2BFFE; /* Pale blue */
+        }
+
+        .home h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #D3D8E2; /* Light grayish-blue */
+        }
+
+        .home h3 span {
+            color: #A2BFFE; /* Pale blue */
+        }
+
+        .home p {
+            font-size: 18px;
+            color: #D3D8E2; /* Light grayish-blue */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            animation: pulse 2.5s ease-in-out infinite; /* Tween animation */
+            transition: all 0.4s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2) rotate(15deg); /* Scale and rotation */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            filter: brightness(1.1);
+        }
+
+        /* Hire Me Button */
+        .btn {
+            padding: 12px 25px;
+            border: 2px solid #F5F6F5; /* Soft off-white border */
+            color: #F5F6F5; /* Soft off-white */
+            text-decoration: none;
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: #A2BFFE; /* Pale blue */
+            position: relative;
+            overflow: hidden;
+            animation: bounce 4s ease-in-out infinite; /* Tween animation */
+            transition: all 0.5s ease;
+        }
+
+        .btn:hover {
+            background-color: #B0C4DE; /* Light steel blue */
+            transform: scale(1.05) translateY(-3px) rotate(5deg); /* Scale, lift, and rotation */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%; /* Shine effect */
+        }
+
+        .btn:active {
+            background-color: #87CEEB; /* Light sky blue on click */
+            transform: scale(0.95) translateY(0) rotate(0); /* Shrink and reset */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s ease;
+        }
+
+        /* Keyframe Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Ashwin</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Skills</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Ashwin</span></h1>
+            <h3>I'm a <span>Developer specialized in web and game development</span></h3>
+            <p>Here are my works till now</p>
+            
+            <div class="social-icons">
+                <a href="https://x.com/AshwinGuru46932" target="_blank">
+                    <img src="x.jpeg" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/ashwin.g0/" target="_blank">
+                    <img src="instagram.jpeg" alt="Instagram">
+                </a>
+                <a href="https://discord.com/channels/@zyntharion" target="_blank">
+                    <img src="discord.png" alt="Discord">
+                </a>
+            </div>
+
+            <a href="#" class="btn" onclick="copyEmail()">Hire Me</a>
+        </div>
+    </section>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("ashwingurung108@gmail.com");
+            alert("Email copied to clipboard: ashwingurung108@gmail.com");
+        }
+    </script>
+</body>
+</html>

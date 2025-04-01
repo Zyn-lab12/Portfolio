@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('moon.gif');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    image-rendering: auto;
+}
+
+header {
+    z-index: 889;
+    position: fixed;
+    background-color: #87CEEB; /* Light sky blue */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+header .brand {
+    color: #F5F6F5; /* Soft off-white */
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    animation: float 3s ease-in-out infinite; /* Tween animation: gentle float */
+    transition: 0.3s ease;
+}
+
+header .brand:hover {
+    transform: scale(1.05) rotate(5deg); /* Scale and slight rotation */
+    color: #B0C4DE; /* Light steel blue */
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation a {
+    color: #F5F6F5; /* Soft off-white */
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+header .navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #B0C4DE; /* Light steel blue underline */
+    transition: width 0.3s ease;
+}
+
+header .navigation a:hover::after {
+    width: 100%; /* Underline grows on hover */
+}
+
+header .navigation a:hover {
+    color: #B0C4DE; /* Light steel blue */
+    transform: translateY(-2px) rotate(3deg); /* Lift and slight rotation */
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home h1 {
+    color: #F5F6F5; /* Soft off-white */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.home h1 span {
+    font-size: 3rem;
+    color: #A2BFFE; /* Pale blue */
+}
+
+.home .typing-text {
+    font-size: 1.5rem;
+    color: #D3D8E2; /* Light grayish-blue */
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.home .social-icons {
+    margin-top: 30px;
+}
+
+.home .social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.home .social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: pulse 2.5s ease-in-out infinite; /* Tween animation: subtle pulse */
+    transition: all 0.4s ease;
+}
+
+.home .social-icons img:hover {
+    transform: scale(1.2) rotate(15deg); /* Scale and more noticeable rotation */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Moved 'Hire Me' button further down */
+.home .btn {
+    color: #F5F6F5; /* Soft off-white */
+    background-color: #A2BFFE; /* Pale blue */
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+    animation: bounce 4s ease-in-out infinite; /* Tween animation: gentle bounce */
+    transition: all 0.5s ease;
+}
+
+.home .btn:hover {
+    background-color: #B0C4DE; /* Light steel blue */
+    transform: scale(1.05) translateY(-3px) rotate(5deg); /* Scale, lift, and rotation */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.home .btn:hover::before {
+    left: 100%; /* Shine effect moves across */
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    .navigation.active {
+        z-index: 889;
+        position: fixed;
+        background-color: #F5F6F5; /* Off-white */
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+        transition: 0.3s ease;
+    }
+
+    header .navigation a {
+        color: #4682B4; /* Steel blue */
+        font-size: 1.2em;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.3s ease;
+    }
+
+    header .navigation a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 5px;
+        left: 40px;
+        background-color: #A2BFFE; /* Pale blue underline */
+        transition: width 0.3s ease;
+    }
+
+    header .navigation a:hover::after {
+        width: calc(100% - 80px); /* Underline grows */
+    }
+
+    header .navigation a:hover {
+        background-color: #A2BFFE; /* Pale blue */
+        color: #F5F6F5; /* Off-white */
+        transform: translateY(-2px) rotate(3deg); /* Lift and slight rotation */
+    }
+
+    .home {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .home .typing-text {
+        font-size: 1.2rem;
+    }
+
+    .home .social-icons img {
+        width: 40px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Gentle vertical float */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.05); /* Subtle pulse effect */
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); /* Soft bounce */
+    }
+}
